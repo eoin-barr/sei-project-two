@@ -1,0 +1,289 @@
+@import '~bulma/bulma.sass';
+
+
+
+.h1-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.h1{
+  margin-bottom: 20px;
+}
+
+.level{
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+select{
+  width: 180px;
+}
+
+.card{
+  border-radius: 10px;
+}
+.card:hover{
+  transform: scale(1.01);
+}
+
+.card-header{
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+    .title{
+      font-size: medium;
+    } 
+}
+
+.card-image{
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .center-image{
+    margin-top: 10px;
+    min-height: 410px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.food-center-image{
+  border-radius: 5px;
+  margin-top: 10px;
+  min-height: 410px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-food{
+  border-radius: 10px;;
+}
+
+
+
+
+.display-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.figure-box{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+  .figure-center{
+    margin-top: 10px;
+    min-height: 410px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .second-master-div{
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+.flex-style{
+  display: flex;
+  flex-direction: column;
+}
+
+.food-section{
+  margin-top: -43px;
+}
+
+.beer-section{
+  padding-top: 1rem;
+}
+
+.food-button{
+  margin-top: 10px;
+}
+
+.beer-button{
+  margin-bottom: 10px;
+}
+
+.food-button:hover{
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.1));
+  transform: scale(1.02);
+}
+
+.beer-button:hover{
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.1));
+  transform: scale(1.02);
+}
+  
+
+.during-popup{
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+.PopUp{
+  position: fixed;
+  left: 25%;
+  top: 20%;
+  height: 50%;
+  width: 50%;
+  border: 1px solid #011627;
+  border-radius: 1em;
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(255, 255, 255, 0.3));
+  background-color: #FDFFFC;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+  color: #011627;
+}
+
+
+.popup-x{
+  width: 4em;
+  height: 4em;
+  border: none;
+  border-top-right-radius: 1em;
+  align-self: flex-start;
+  justify-self: flex-start;
+}
+
+.Checkout{
+  width: 100%;
+  height: 200vh;
+}
+
+button, .pop-up-btns{
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;  
+  padding: 0.5em;
+}
+
+.pop-up-btns{
+  height: 3rem;
+  background-color: #0ca9d6;
+  padding: 0.5rem 3rem;
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.2));
+
+}
+
+.pop-up-btns:hover{
+  transform: scale(1.02);
+}
+
+
+div.start-btn:focus{
+  outline: none;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+div.start-btn:hover{
+  cursor: pointer;
+}
+
+.button-container{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pu-img{
+  width: 20%;
+}
+
+.content-container{
+  text-align: center;
+  height: 50%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Checkoutstart-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes blink{
+  20%{
+    opacity: .25
+  }40%{
+    opacity: .0
+  }60%{
+    opacity: .25
+  }80%{
+    opacity: .6
+  }95%{
+    opacity: 1
+  }
+}
+.start-btn{
+  font-size: xx-large;
+  padding: 100px 50px;
+  animation: blink 2s linear infinite;
+}
+
+br{
+  height: 1px;
+  width: 90%;
+  background-color: black;
+}
+
+
+.set-full-length{
+  height: 100%;
+}
+
+.is-start-right{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.is-start-left{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.is-content-h1{
+  font-size: large;
+  font-weight: 500;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}

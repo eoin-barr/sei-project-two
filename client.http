@@ -1,0 +1,10 @@
+
+@beerBaseUrl = https://api.punkapi.com/v2
+
+#   GET THE BEERS
+
+GET {{beerBaseUrl}}/beers
+
+###
+
+GET www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata
