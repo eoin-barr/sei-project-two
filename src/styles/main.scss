@@ -42,6 +42,10 @@ select{
     } 
 }
 
+.is-fullwidths{
+  width: 100%;
+}
+
 .card-image{
   width: 300px;
   display: flex;
@@ -61,7 +65,7 @@ select{
   border-radius: 5px;
   margin-top: 10px;
   min-height: 410px;
-  width: 250px;
+  width: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,6 +73,13 @@ select{
 
 .img-food{
   border-radius: 10px;;
+}
+
+.card-height{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -97,6 +108,27 @@ select{
     align-items: center;
     justify-content: center;
   }
+
+  .figure-center-meal{
+    margin-top: 10px;
+    width: 50%;
+    border-radius: 10px;
+  }
+
+  .center-image-meal{
+    border-radius: 10px;
+  }
+
+  .p-width{
+    width: 50%;
+  }
+
+  .more-margin{
+    margin: 30px 40px;
+    
+  }
+
+
 
 
   .second-master-div{
@@ -131,12 +163,24 @@ select{
   margin-bottom: 10px;
 }
 
+.return-button{
+  margin-bottom: 10px;
+  width: 250px;
+}
+
+
+
 .food-button:hover{
   filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.1));
   transform: scale(1.02);
 }
 
 .beer-button:hover{
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.1));
+  transform: scale(1.02);
+}
+
+.return-button:hover{
   filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.1));
   transform: scale(1.02);
 }
@@ -187,6 +231,8 @@ button, .pop-up-btns{
 }
 
 .pop-up-btns{
+  font-size: large;
+  color: white;
   height: 3rem;
   background-color: #0ca9d6;
   padding: 0.5rem 3rem;
@@ -286,4 +332,33 @@ br{
   font-weight: 500;
   margin-top: 3rem;
   margin-bottom: 1rem;
+}
+
+.collection-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.flexi{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.div-flexi{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3%;
+}
+
+.h1-flexi{
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.add-margin-left{
+  margin-left: -13px;
 }

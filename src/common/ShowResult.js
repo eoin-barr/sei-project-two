@@ -4,9 +4,24 @@ import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
 
 function ShowResult() {
-  const { beerId, mealId } = useParams()
+  const { beerId } = useParams()
   const [beer, setBeer] = React.useState(null)
   const isLoading = !beer
+
+  const handleAdd = () => {
+    let latestLocal = window.localStorage.getItem('beer')
+    if (latestLocal === null) {
+      latestLocal = []
+      latestLocal.push(`${beer.id}`)
+      window.localStorage.setItem('beer', latestLocal.toString())
+    } else {
+      latestLocal = latestLocal.split(',')
+      latestLocal.push(`${beer.id}`)
+      console.log(latestLocal)
+      window.localStorage.setItem('beer', latestLocal.toString())
+    }
+  }
+
 
   React.useEffect(() => {
     const getData = async () => {
@@ -19,7 +34,7 @@ function ShowResult() {
       }
     }
     getData()
-  }, [beerId, mealId])
+  }, [beerId])
 
   return (
     <div className="hero is-fullheight-with-navbar">
@@ -28,7 +43,7 @@ function ShowResult() {
           {isLoading && <p>loading...</p>}
           {beer && (
             <div className="card-container">
-              <h2 id="sblack" className="title has-text-centered">What To Expect...</h2>
+              <h2 id="sblack" className="title has-text-centered">Quick Overview</h2>
               <hr />
               <div className="columns">
                 <div className="column is-half figure-box">
@@ -39,15 +54,27 @@ function ShowResult() {
                 <div className="column is-half figure-box">
                   <h4 id="sblack" className="title is-4">
                     <span role="img" aria-label="beer">
-                      🍺
+                      🍻
                     </span>{' '}
                     {beer.name}
                   </h4>
                   <p className="center-the-text">{beer.description}</p>
                   <hr />
                   <h4 id="sblack" className="title is-4">
-                    <span role="img" aria-label="beer">
-                      🍺
+                    <span role="img" aria-label="plate">
+                      🍽️
+                    </span>{' '}
+                    Goes Well With...
+                  </h4>
+                  <ul>
+                    <li>{beer.food_pairing[0]}</li>
+                    <li>{beer.food_pairing[1]}</li>
+                    <li>{beer.food_pairing[2]}</li>
+                  </ul>
+                  <hr />
+                  <h4 id="sblack" className="title is-4">
+                    <span role="img" aria-label="test-tube">
+                      🧪
                     </span>{' '}
                     Feeling Creative?
                   </h4>
@@ -63,14 +90,15 @@ function ShowResult() {
                     to check out the full recipe!
                   </p>
                   <hr />
+                  <button className="button return-button" onClick={handleAdd}>Save to My Collection</button>
+                  <Link to="/index">
+                    <button className="button return-button">Back to Main</button>
+                  </Link>
                 </div>
               </div>
             </div>
           )}
         </div>
-        <Link to="/">
-          <button className="button">Pick Another Combo</button>
-        </Link>
       </section>
     </div>
   )

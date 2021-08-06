@@ -5,15 +5,25 @@ import { Link } from 'react-router-dom'
 
 function FoodCard() {
 
-  const [selection, setSelection] = React.useState()
+  const [selection, setSelection] = React.useState('any')
   const [food, setFood] = React.useState()
   const [randFood, setRandFood] = React.useState()
   const [length, setLength] = React.useState(1)
-  const [count, setCount] = React.useState(0)
+
+
 
   const handleAdd = () => {
-    setCount(count + 1)
-    window.localStorage.setItem(`food${count}`, `${randFood.idMeal}`)
+    let latestLocal = window.localStorage.getItem('food')
+    if (latestLocal === null) {
+      latestLocal = []
+      latestLocal.push(`${randFood.idMeal}`)
+      window.localStorage.setItem('food', latestLocal.toString())
+    } else {
+      latestLocal = latestLocal.split(',')
+      latestLocal.push(`${randFood.idMeal}`)
+      console.log(latestLocal)
+      window.localStorage.setItem('food', latestLocal.toString())
+    }
   }
 
 
@@ -67,6 +77,7 @@ function FoodCard() {
     <section className='section food-section'>
       <div className='container'>
         <div className='columns flex-style' >
+
           <div className='card-content'>
             <div className="h1-container">
               <h1 className="title h1" >Food</h1>
@@ -74,6 +85,7 @@ function FoodCard() {
             <div className="level">
               <div className='select' >
                 <select onChange={handleChange}>
+                  <option selected disabled>Cuisine</option>
                   <option name='Any' value='any'>Any</option>
                   <option name='italian' value='italian'>Italian</option>
                   <option name='chinese' value='chinese'>Chinese</option>
@@ -106,11 +118,10 @@ function FoodCard() {
         </div>
         <div className="btn-container">
           <button className='button food-button is-half-width' onClick={handleRandomize}>Change Meal</button>
-          <Link to="/it">
+          <Link to={`/meal/${randFood ? randFood.idMeal : ''}`}>
             <button className="button food-button is-fullwidth">Tell Me More</button>
           </Link>
           <button className='button food-button is-half-width' onClick={handleAdd}>Save Meal to My Collection</button>
-          <button className='button food-button is-half-width'>My Meal Collection</button>
 
         </div>
       </div>

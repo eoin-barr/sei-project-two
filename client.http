@@ -8,3 +8,11 @@ GET {{beerBaseUrl}}/beers
 ###
 
 GET www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata
+
+
+###
+https://www.themealdb.com/api/json/v1/1/lookup.php?i=52772
+
+
+###
+https://api.punkapi.com/v2/beers/1
