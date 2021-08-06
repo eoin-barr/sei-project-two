@@ -17,7 +17,7 @@ function PopUp(props) {
             <h1 className="is-content-h1">Upgrade Your At Home Cooking</h1>
             <br />
             <p >Search from a wide variety of international dishes and BrewDog beers to take your at home dining experience to the next level.<br />
-              If you like what you see save it for later and revisit it in <span>{'"My Collection"'}</span> so that you will always have it!
+              If you like what you see save it for later and revisit it in <span>{'"My Collection"'}</span> so that you will always have it!<br /> ** Firefox Browser is highly recommended for using this app **
             </p>
           </div>
           <Link className="content-container bottom-content" to="/index">
