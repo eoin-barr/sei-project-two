@@ -21,7 +21,7 @@ function PopUp(props) {
             </p>
           </div>
           <Link className="content-container bottom-content" to="/index">
-            <button className="pop-up-btns" onClick={() => setPopUp(false)}>{`Get Started`}</button>
+            <button className="pop-up-btns" onClick={() => setPopUp(false)}>Get Started</button>
           </Link>
         </div>
 

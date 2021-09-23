@@ -71,7 +71,7 @@ function ShowMealResult() {
                   {'Prefer to Watch How Its Done?'}
                 </h4>
                 <p className="center-the-text p-width">
-                  If reading isn't your thing.
+                  If reading isn&apos;t your thing.
                   Why not cook along with the pros!
                   <span>
                     <a href={meal.strYoutube}
@@ -80,7 +80,7 @@ function ShowMealResult() {
                       &nbsp;Click here&nbsp;
                     </a>
                   </span>
-                  to watch how it's done!
+                  to watch how it&apos;s done!
                 </p>
                 <hr />
                 <button className="button return-button" onClick={handleAdd}>Save to My Collection</button>

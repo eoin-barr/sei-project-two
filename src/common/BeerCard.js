@@ -74,6 +74,7 @@ function BeerCard() {
 
   return (
     <>
+      {console.log(dontShowButton)}
       <section className="section beer-section">
         <div className="container">
           <div className="columns ">
